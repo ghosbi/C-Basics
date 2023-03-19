@@ -7,9 +7,20 @@ namespace FirstApplication.ConsoleApp // Объявление пространс
     {
         static void Main(string[] args) // Объявление метода Main
         {
-            string MyName;
-            MyName = "Pavel";
-            Console.WriteLine(MyName);
+            bool HaveIApet = true;
+            double MyShoesSize = 42;
+
+            Console.WriteLine("Как тебя зовут?");
+            object name = Console.ReadLine();
+            Console.WriteLine("Мое имя:" +  name);
+            Console.WriteLine("Сколько тебе лет?");
+            int age = 24;
+            Console.WriteLine("Мне:" + age);
+            Console.WriteLine("Есть ли у меня питомец?"+ HaveIApet);
+            Console.WriteLine("Мой размер обуви:" + MyShoesSize);
+
+
+
 
         }
     }
