@@ -7,9 +7,28 @@ namespace FirstApplication.ConsoleApp // Объявление пространс
     {
         static void Main(string[] args) // Объявление метода Main
         {
+            Console.WriteLine("Цикл do while");
+            int k = 0;
+
+            do
+            {
+                Console.WriteLine(k);
+
+                Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
+
+                switch (Console.ReadLine())
+                {
+                  
+                }
+                k++;
+            }
+            while (k < 3);
+        }
+        static void Coloors()
+        {
             Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
             var color = Console.ReadLine();
-            
+
             if (color == "red")
             {
                 Console.BackgroundColor = ConsoleColor.Red;
@@ -17,7 +36,7 @@ namespace FirstApplication.ConsoleApp // Объявление пространс
 
                 Console.WriteLine("Your color is red!");
             }
-            
+
             else if (color == "green")
             {
                 Console.BackgroundColor = ConsoleColor.Green;
@@ -36,4 +55,7 @@ namespace FirstApplication.ConsoleApp // Объявление пространс
 
         }
     }
+
 }
+
+
