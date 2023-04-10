@@ -7,29 +7,81 @@ namespace FirstApplication.ConsoleApp // Объявление пространс
 	{
 		static void Main(string[] args) // Объявление метода Main
 		{
-			var arr = new int[] {5, 6, 7, 9, 1, 2, 3, 4};
-
-			int a = 0;
 			
+        }
 
-			for (int i = 0; i < arr.Length; i++)
-			{
-				for (int j = i + 1; j <arr.Length; j++)
-				if (arr[i] > arr[j])
-				{
-					a = arr[i];
-					arr[i] = arr[j];
-					arr[j] = a;
+		static void task4315()
+		{
+            int[] array1 = new int[] { 1, 4, 5, 6, 10, 12, 11, 14, -1, -3, -9 };
 
-				}
-				
+            int positiveNumber = 0;
 
-			}
-			foreach(var item in arr)
-				{
-					Console.Write(item);
-				}
-			Console.ReadKey();		}
+            for (int i = 0; i < array1.Length; i++)
+            {
+                if (array1[i] >= 0)
+                {
+                    positiveNumber += 1;
+                }
+            }
+            Console.WriteLine("Кол-во позитивных чисел:" + positiveNumber);
+        }
+		static void task4314()
+		{
+            int[][] array = new int[3][];
+            array[0] = new int[2] { 1, 2 };
+            array[1] = new int[3] { 1, 2, 3 };
+            array[2] = new int[5] { 1, 2, 3, 4, 5, };
+
+            foreach (var num in array)
+            {
+                foreach (var item in num)
+                {
+                    Console.Write(item + " ");
+                }
+            }
+        }
+		static void task4313()
+		{
+            var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
+
+            int sum = 0;
+
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                sum += arr[i];
+
+
+            }
+            Console.WriteLine(sum);
+            Console.ReadKey();
+        }
+		static void ForInFor()
+		{
+            var arr = new int[] { 5, 6, 7, 9, 1, 2, 3, 4 };
+
+            int a = 0;
+
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                for (int j = i + 1; j < arr.Length; j++)
+                    if (arr[i] > arr[j])
+                    {
+                        a = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = a;
+
+                    }
+
+
+            }
+            foreach (var item in arr)
+            {
+                Console.Write(item);
+            }
+            Console.ReadKey();
+        }
 		static void LearnArray()
 		{
 			int[,] array = { { 1, 2, 3}, { 5, 6, 7}, { 9, 10, 11} };
