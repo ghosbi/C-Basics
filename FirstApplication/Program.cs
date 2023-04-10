@@ -7,9 +7,137 @@ namespace FirstApplication.ConsoleApp // Объявление пространс
 	{
 		static void Main(string[] args) // Объявление метода Main
 		{
-			
+            
         }
 
+        static void workpractical45()
+        {
+            var count = 0;
+            while (count < 3)
+            {
+                (string firstName, string secondName, string login, int loginCount, bool pet, double age, string[] favoriteColor) anketa;
+
+                Console.WriteLine("Введите имя");
+                anketa.firstName = Console.ReadLine();
+
+                Console.WriteLine("Введите фамилию");
+                anketa.secondName = Console.ReadLine();
+
+                Console.WriteLine("Введите логин");
+                anketa.login = Console.ReadLine();
+                anketa.loginCount = anketa.login.Length;
+
+                Console.WriteLine("Есть ли  у вас животные? Да или нет");
+                var result = Console.ReadLine();
+                if (result == "Да")
+                {
+                    anketa.pet = true;
+                }
+                else
+                {
+                    anketa.pet = false;
+                }
+
+                Console.WriteLine("Введите возраст:");
+                anketa.age = double.Parse(Console.ReadLine());
+
+                anketa.favoriteColor = new string[3];
+                Console.WriteLine("Введите три любимы цвета");
+                for (int i = 0; i < anketa.favoriteColor.Length; i++)
+                {
+                    anketa.favoriteColor[i] = Console.ReadLine();
+                }
+
+                Console.WriteLine(anketa);
+
+                count++;
+
+            }
+
+
+        }
+        static void task445()
+        {
+            (string Name, string Type, double Age, int NameCount) Pet;
+            Pet.Name = Console.ReadLine();
+            Pet.Type = Console.ReadLine();
+            Pet.Age = Convert.ToDouble(Console.ReadLine());
+            Pet.NameCount = Pet.Name.Length;
+
+            Console.WriteLine(Pet.Name + Pet.Type + Pet.Age + Pet.NameCount);
+        }
+        static void task443()
+        {
+            var (name, age) = ("Евгения", 27);
+            Console.WriteLine("Ваше имя: {0}", name);
+            Console.WriteLine("Ваш возраст: {0}", age);
+
+            (string name, int age) anketa;
+            anketa.name = Console.ReadLine();
+            anketa.age = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Ваше имя: {0}", anketa.name);
+            Console.WriteLine("Ваш возраст: {0}", anketa.age);
+
+            Console.ReadKey();
+        }
+        static void task442()
+        {
+            (string name, int age) anketa;
+            anketa.name = Console.ReadLine();
+            anketa.age = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Ваше имя: {0}", anketa.name);
+            Console.WriteLine("Ваш возраст: {0}", anketa.age);
+
+            Console.ReadKey();
+        }
+        static void task4317()
+        {
+            int[,] arr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
+
+            int a = 0;
+
+
+            for (int i = 0; i <= arr.GetUpperBound(0); i++)
+            {
+
+                for (int j = i = 0; j <= arr.GetUpperBound(1); j++)
+                {
+                    for (int k = j + 1; k <= arr.GetUpperBound(1); k++)
+                    {
+                        if (arr[i, j] > arr[i, k])
+                        {
+                            a = arr[i, k];
+                            arr[i, k] = arr[i, j];
+                            arr[i, j] = a;
+                        }
+
+
+                    }
+
+                }
+            }
+        }
+		static void task4316()
+		{
+            int[,] arr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
+
+            int positiveNumber = 0;
+
+            for (int i = 0; i <= arr.GetUpperBound(0); i++)
+            {
+                for (int j = 0; j <= arr.GetUpperBound(1); j++)
+                {
+                    if (arr[i, j] >= 0)
+                    {
+                        positiveNumber += 1;
+                    }
+                }
+
+            }
+            Console.WriteLine("Кол-во позитивных чисел:" + positiveNumber);
+        }
 		static void task4315()
 		{
             int[] array1 = new int[] { 1, 4, 5, 6, 10, 12, 11, 14, -1, -3, -9 };
