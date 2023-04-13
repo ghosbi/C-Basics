@@ -9,20 +9,6 @@ namespace FirstApplication.ConsoleApp // Объявление пространс
 		{
             var (name, age) = ("Евгения", 27);
 
-            Console.WriteLine("Мое имя: {0}", name);
-            Console.WriteLine("Мой возраст: {0}", age);
-
-            Console.Write("Введите имя: ");
-            name = Console.ReadLine();
-            Console.Write("Введите возрас с цифрами:");
-            age = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("Ваше имя: {0}", name);
-            Console.WriteLine("Ваш возраст: {0}", age);
-
-            ShowColor();
-            Console.ReadKey();
-
         }
 
         static void ShowColor()
