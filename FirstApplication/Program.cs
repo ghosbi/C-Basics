@@ -10,6 +10,21 @@ namespace FirstApplication.ConsoleApp // Объявление пространс
             
         }
 
+        static void task1()
+        {
+            (string name, string[] dishes) anketa;
+
+            Console.WriteLine("Введите имя");
+            anketa.name = Console.ReadLine();
+
+            anketa.dishes = new string[5];
+            Console.WriteLine("Введите пять своих любимых блюд:");
+            for (int i = 0; i < anketa.dishes.Length; i++)
+            {
+                anketa.dishes[i] = Console.ReadLine();
+            }
+
+        }
         static void workpractical45()
         {
             var count = 0;
